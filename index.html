@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Réservez votre pass GP, VIP ou VVIP pour l'avant-première du film M'AS-TU VU ?">
+  <title>M'AS-TU VU ? — Réservation des pass</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Fond décoratif futuriste -->
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#accueil" aria-label="M'AS-TU VU, accueil">
+      <span class="brand-mark">AS<span>V</span></span>
+      <span class="brand-copy">ART SPIRIT <b>STUDIO</b></span>
+    </a>
+    <a class="top-cta" href="#tickets">Réserver mon pass <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <!-- Section d'accueil / affiche du film -->
+    <section class="hero section-wrap" id="accueil">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> AVANT-PREMIÈRE • ÉVÉNEMENT CINÉMA</p>
+        <h1>M'AS-TU<br><span>VU</span> <i>?</i></h1>
+        <p class="hero-intro">Le rendez-vous cinéma à ne pas manquer. Choisissez votre pass et réservez votre place en quelques secondes.</p>
+        <div class="event-meta">
+          <div class="meta-item"><span class="meta-label">DATE</span><strong>Samedi 12 décembre 2026</strong></div>
+          <div class="meta-item"><span class="meta-label">HEURE</span><strong>17H00</strong></div>
+          <div class="meta-item"><span class="meta-label">LIEU</span><strong>Jeckad Espace Événementiel</strong></div>
+        </div>
+        <a class="primary-cta" href="#tickets">Choisir mon pass <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="poster-frame">
+        <div class="poster-glow" aria-hidden="true"></div>
+        <img src="assets/affiche-mas-tu-vu.jpeg" alt="Affiche officielle de l'avant-première du film M'AS-TU VU ?">
+        <div class="poster-caption"><span>ART SPIRIT STUDIO</span><span>ÉDITION 2026</span></div>
+      </div>
+      <div class="hero-index" aria-hidden="true">01 <span>/</span> 03</div>
+    </section>
+
+    <!-- Bandeau d'urgence promotionnelle -->
+    <section class="promo-strip section-wrap" aria-label="Offre promotionnelle">
+      <span class="promo-icon" aria-hidden="true">%</span>
+      <div><strong>OFFRE PROMOTIONNELLE GP</strong><p>Profitez du pass GP à 3 000 FCFA — offre annoncée jusqu'au 7.</p></div>
+      <a href="#gp">Profiter de l'offre <span aria-hidden="true">↗</span></a>
+    </section>
+
+
+<!-- SECTION : DISPONIBILITÉ DES BILLETS -->
+<section class="inventory section-wrap" id="disponibilite">
+
+  <div class="inventory-heading">
+    <p class="eyebrow">DISPONIBILITÉ DES PASS</p>
+    <h2>Votre place vous <span>attend.</span></h2>
+    <p>Consultez les disponibilités avant de réserver.</p>
+  </div>
+
+  <!-- Compte à rebours -->
+  <div class="urgency-panel">
+    <div class="urgency-copy">
+      <span class="urgency-label">OFFRE EN COURS</span>
+      <strong>Ne tardez pas à réserver !</strong>
+      <p>Choisissez votre pass pour l'avant-première.</p>
+    </div>
+
+    <div class="countdown">
+      <div>
+        <strong id="timer-minutes">15</strong>
+        <span>MINUTES</span>
+      </div>
+      <i>:</i>
+      <div>
+        <strong id="timer-seconds">00</strong>
+        <span>SECONDES</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stock GP -->
+  <div class="inventory-grid">
+
+    <article class="inventory-card">
+      <h3>PASS GP</h3>
+      <p class="stock-number">
+        <strong id="gp-stock">100</strong>
+        places restantes
+      </p>
+
+      <div class="inventory-track">
+        <span id="gp-stock-bar"></span>
+      </div>
+
+      <p>Billets vendus : <strong id="gp-sold">0</strong></p>
+    </article>
+
+    <!-- Stock VIP -->
+    <article class="inventory-card">
+      <h3>PASS VIP</h3>
+      <p class="stock-number">
+        <strong id="vip-stock">50</strong>
+        places restantes
+      </p>
+
+      <div class="inventory-track">
+        <span id="vip-stock-bar"></span>
+      </div>
+
+      <p>Billets vendus : <strong id="vip-sold">0</strong></p>
+    </article>
+
+    <!-- Stock VVIP -->
+    <article class="inventory-card">
+      <h3>PASS VVIP</h3>
+      <p class="stock-number">
+        <strong id="vvip-stock">20</strong>
+        places restantes
+      </p>
+
+      <div class="inventory-track">
+        <span id="vvip-stock-bar"></span>
+      </div>
+
+      <p>Billets vendus : <strong id="vvip-sold">0</strong></p>
+    </article>
+
+  </div>
+
+  <p class="inventory-disclaimer">
+    Disponibilité indicative. Les ventes doivent être confirmées
+    par l'organisateur.
+  </p>
+
+</section>
+<!-- FIN SECTION DISPONIBILITÉ -->
+
+
+    <!-- Trois formulaires de réservation indépendants -->
+    <section class="tickets section-wrap" id="tickets">
+      <div class="section-heading">
+        <p class="eyebrow">VOTRE ACCÈS À L'ÉVÉNEMENT</p>
+        <h2>Choisissez votre <span>expérience.</span></h2>
+        <p>Remplissez le formulaire correspondant à votre pass. Votre demande sera préparée dans WhatsApp pour confirmation.</p>
+      </div>
+
+      <div class="ticket-grid">
+        <!-- Formulaire GP -->
+        <article class="ticket-card ticket-gp" id="gp">
+          <div class="card-top"><span class="ticket-tag">PASS 01</span><span class="ticket-symbol" aria-hidden="true">◈</span></div>
+          <h3>GP</h3>
+          <p class="ticket-desc">L'expérience cinéma essentielle.</p>
+          <div class="price-line"><span class="old-price">5 000 FCFA</span><strong>3 000 <small>FCFA</small></strong></div>
+          <span class="offer-label">OFFRE PROMOTIONNELLE • FIN LE 7</span>
+          <ul class="benefits"><li>Accès à l'avant-première</li><li>Réservation par WhatsApp</li><li>Confirmation par l'équipe</li></ul>
+          <form class="ticket-form" data-ticket="GP" data-price="3000">
+            <label for="gp-name">Nom complet</label>
+            <input id="gp-name" name="name" type="text" placeholder="Votre nom complet" autocomplete="name" required>
+            <label for="gp-phone">Votre numéro WhatsApp</label>
+            <input id="gp-phone" name="phone" type="tel" placeholder="Ex. : 07 00 00 00 00" autocomplete="tel" required>
+            <label for="gp-quantity">Nombre de pass</label>
+            <select id="gp-quantity" name="quantity" required>
+              <option value="1">1 pass</option><option value="2">2 pass</option><option value="3">3 pass</option><option value="4">4 pass</option><option value="5">5 pass</option><option value="6">6 pass</option><option value="7">7 pass</option><option value="8">8 pass</option><option value="9">9 pass</option><option value="10">10 pass</option>
+            </select>
+            <button class="ticket-submit" type="submit">Réserver mon GP <span aria-hidden="true">↗</span></button>
+          </form>
+        </article>
+
+        <!-- Formulaire VIP -->
+        <article class="ticket-card ticket-vip">
+          <div class="card-top"><span class="ticket-tag">PASS 02</span><span class="ticket-symbol" aria-hidden="true">◆</span></div>
+          <h3>VIP</h3>
+          <p class="ticket-desc">Une expérience plus exclusive.</p>
+          <div class="price-line"><strong>10 000 <small>FCFA</small></strong></div>
+          <span class="offer-label offer-neutral">ACCÈS VIP</span>
+          <ul class="benefits"><li>Accès à l'avant-première</li><li>Réservation prioritaire via WhatsApp</li><li>Confirmation par l'équipe</li></ul>
+          <form class="ticket-form" data-ticket="VIP" data-price="10000">
+            <label for="vip-name">Nom complet</label>
+            <input id="vip-name" name="name" type="text" placeholder="Votre nom complet" autocomplete="name" required>
+            <label for="vip-phone">Votre numéro WhatsApp</label>
+            <input id="vip-phone" name="phone" type="tel" placeholder="Ex. : 07 00 00 00 00" autocomplete="tel" required>
+            <label for="vip-quantity">Nombre de pass</label>
+            <select id="vip-quantity" name="quantity" required>
+              <option value="1">1 pass</option><option value="2">2 pass</option><option value="3">3 pass</option><option value="4">4 pass</option><option value="5">5 pass</option><option value="6">6 pass</option><option value="7">7 pass</option><option value="8">8 pass</option><option value="9">9 pass</option><option value="10">10 pass</option>
+            </select>
+            <button class="ticket-submit" type="submit">Réserver mon VIP <span aria-hidden="true">↗</span></button>
+          </form>
+        </article>
+
+        <!-- Formulaire VVIP -->
+        <article class="ticket-card ticket-vvip">
+          <div class="card-top"><span class="ticket-tag">PASS 03</span><span class="ticket-symbol" aria-hidden="true">✦</span></div>
+          <h3>VVIP</h3>
+          <p class="ticket-desc">Le pass pour une expérience premium.</p>
+          <div class="price-line"><strong>20 000 <small>FCFA</small></strong></div>
+          <span class="offer-label offer-neutral">EXPÉRIENCE PREMIUM</span>
+          <ul class="benefits"><li>Accès à l'avant-première</li><li>Demande personnalisée via WhatsApp</li><li>Confirmation par l'équipe</li></ul>
+          <form class="ticket-form" data-ticket="VVIP" data-price="20000">
+            <label for="vvip-name">Nom complet</label>
+            <input id="vvip-name" name="name" type="text" placeholder="Votre nom complet" autocomplete="name" required>
+            <label for="vvip-phone">Votre numéro WhatsApp</label>
+            <input id="vvip-phone" name="phone" type="tel" placeholder="Ex. : 07 00 00 00 00" autocomplete="tel" required>
+            <label for="vvip-quantity">Nombre de pass</label>
+            <select id="vvip-quantity" name="quantity" required>
+              <option value="1">1 pass</option><option value="2">2 pass</option><option value="3">3 pass</option><option value="4">4 pass</option><option value="5">5 pass</option><option value="6">6 pass</option><option value="7">7 pass</option><option value="8">8 pass</option><option value="9">9 pass</option><option value="10">10 pass</option>
+            </select>
+            <button class="ticket-submit" type="submit">Réserver mon VVIP <span aria-hidden="true">↗</span></button>
+          </form>
+        </article>
+      </div>
+      <p class="payment-note"><span aria-hidden="true">i</span> La demande n'est pas un paiement ni une confirmation automatique. L'équipe vous répondra sur WhatsApp pour confirmer la disponibilité et les modalités de règlement.</p>
+    </section>
+
+    <!-- Rappel pratique -->
+    <section class="event-footer section-wrap">
+      <div><p class="eyebrow">RENDEZ-VOUS LE 12.12.2026</p><h2>Le grand écran.<br><span>Une seule question.</span></h2></div>
+      <div class="event-footer-detail"><p><strong>M'AS-TU VU ?</strong> — Un film de Félix Assahoua</p><p>Samedi 12 décembre 2026 à 17H00</p><p>Jeckad Espace Événementiel</p><a href="#tickets">Réserver un pass <span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="footer-brand" href="#accueil">ART SPIRIT STUDIO</a>
+    <p>Avant-première du film M'AS-TU VU ? • 2026</p>
+    <a href="#accueil">Retour en haut ↑</a>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
